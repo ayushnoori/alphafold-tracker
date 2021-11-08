@@ -1,0 +1,58 @@
+/* 1. ELEMENT SELECTOR */
+/* adjust h4 spacing for examples page */
+h4 {
+    margin-bottom: 0;
+}
+
+/* 2. CLASS SELECTOR */
+/* adjust container padding to add space between navbar and content */
+.custom-container {
+    padding-top: 3em;
+    padding-bottom: 1.5em;
+}
+
+/* adjust h2 padding to add space between paragraphs */
+.custom-h2 {
+    padding-top: 1.5em;
+}
+
+/* 3. GROUPING SELECTOR */
+/* remove underline in references card */
+.custom-card-link, .custom-reference {
+    text-decoration: none;
+}
+
+/* 4. PSEUDO SELECTOR */
+/* change color upon hover */
+.custom-card-link:hover, .custom-card-link-dark:hover {
+    color: gray;
+}
+
+/* for primary AF2 paper */
+.custom-card-link-dark {
+    text-decoration: none;
+    color: white;
+}
+
+/* add underline for paper title and for specific label */
+.custom-paper, .custom-label {
+    text-decoration: underline;
+}
+
+/* remove underline and restore color for blockquote footer */
+.custom-blockquote-footer {
+    color: #919aa1;
+    text-decoration: none;
+}
+
+/* add italics */
+.custom-italics{
+    font-style: italic;
+}
+
+/* 5. ID SELECTOR */
+/* change color for my name */
+#ayush {
+    color: #1F9BCF;
+    font-weight: bold;
+}

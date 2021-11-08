@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+      <meta charset="utf-8">
+
+      <!-- include Bootstrap; here, I use a Bootswatch theme rather than the base Bootstrap distribution -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
+
+      <!-- custom CSS and page title -->
+      <link href="css/custom.css" rel="stylesheet">
+      <title>AlphaFold Publication Tracker</title>
+
+      <!-- load JSmol -->
+      <script type="text/javascript" src="jsmol/JSmol.min.js"></script>
+
+    </head>
+    <body>
+        <!-- use Bootstrap flexbox-based grid layout -->
+        <!-- navigation bar source code adapted from https://bootswatch.com/lux/ -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container-fluid">
+            
+            <!-- icon -->
+            <a class="navbar-brand" href="#">AlphaFold Publication Tracker</a>
+            
+            <!-- toggle menu for small screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- define menu items -->
+            <div class="collapse navbar-collapse" id="navbarColor01">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="examples.html">Examples<span class="visually-hidden">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="references.html" role="button" aria-haspopup="true" aria-expanded="true">References</a>
+                  <div class="dropdown-menu" data-bs-popper="none">
+                    <a class="dropdown-item" href="https://doi.org/10.1038/s41586-021-03819-2">AlphaFold Paper</a>
+                    <a class="dropdown-item" href="https://www.biorxiv.org/content/10.1101/2021.10.04.463034v1">AlphaFold-Multimer Paper</a>
+                    <a class="dropdown-item" href="acknowledgements.html">Acknowledgements</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+
+        <!-- main content -->
+        <div class="container custom-container">
+
+          <div class="row">
+            <div class="col-lg-12"></div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+
+              <div class="alert alert-dismissible alert-danger">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>This page may take extended time to load due to the embedded JSmol applications.</strong>
+              </div>
+
+              <h2 class="custom-h2">Examples</h2>
+              <p>Please see examples of comparisons between experimentally-determined structures and AlphaFold 2 predictions below. The structures are interactive; click and drag to explore them.</p>
+
+              <!-- adapted from https://bootswatch.com/lux/ -->
+              <div class="accordion" id="accordionExample">
+
+                <!-- example #1 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="exampleOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <h4>CDK1/CKS1</h4>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <!-- adapted from JSmol wiki: http://wiki.jmol.org/index.php/Jmol_JavaScript_Object -->
+                      <p>The experimentally determined structure is retrieved below from the <a href="https://www.rcsb.org/">RCSB Protein Data Bank</a>.</p>
+                      <p><span class="custom-label">PDB ID:</span> 4YC6</p>
+                      <p><span class="custom-label">Reference:</span> <a class="custom-reference" href="http://dx.doi.org/10.1038/ncomms7769">Brown et al., Nat Commun 2021</a></p>
+                      <script>
+                        let parameters = {
+                          color: "#FFFFFF",
+                          width: 600,
+                          height: 600,
+                          script: "load=4YC6; cartoon only; spin on;",
+                          use: "HTML5",
+                          j2sPath: "jsmol/j2s",
+                        };
+                        Jmol.getApplet("myJmol", parameters);
+                      </script>
+                      <a href="https://www.rcsb.org/structure/4YC6"><button type="button" class="btn btn-outline-primary">View PDB Entry</button></a>
+                      <a href="#"><button type="button" class="btn btn-outline-success">View AF2 Structure</button></a>                    </div>
+                  </div>
+                </div>
+
+                <!-- example #2 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="exampleTwo">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                      <h4>CDC14</h4>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <!-- adapted from JSmol wiki: http://wiki.jmol.org/index.php/Jmol_JavaScript_Object -->
+                      <!-- useful reference: https://cbm.msoe.edu/includes/modules/jmolTutorial/jmolDisplay.html -->
+                      <p>The experimentally determined structure is retrieved below from the <a href="https://www.rcsb.org/">RCSB Protein Data Bank</a>.</p>
+                      <p><span class="custom-label">PDB ID:</span> 1OHC</p>
+                      <p><span class="custom-label">Reference:</span> <a class="custom-reference" href="http://dx.doi.org/10.1093/emboj/cdg348">Gray et al., EMBO J 2021</a></p>
+                      <script>
+                        let parameters2 = {
+                          color: "#FFFFFF",
+                          width: 600,
+                          height: 600,
+                          script: "load=1OHC; cartoon only; spin on;",
+                          use: "HTML5",
+                          j2sPath: "jsmol/j2s",
+                        };
+                        Jmol.getApplet("myJmol2", parameters2);
+                      </script>
+                      <a href="https://www.rcsb.org/structure/1OHC"><button type="button" class="btn btn-outline-primary">View PDB Entry</button></a>
+                      <a href="#"><button type="button" class="btn btn-outline-success">View AF2 Structure</button></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- example #3 is excluded so that the page loads faster; however, the code is correct and functional. -->
+                <!-- <div class="accordion-item">
+                  <h2 class="accordion-header" id="exampleThree">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                      <h4>CDK1/CKS1</h4>
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p>The experimentally determined structure is retrieved below from the <a href="https://www.rcsb.org/">RCSB Protein Data Bank</a>.</p>
+                      <p><span class="custom-label">PDB ID:</span> 4YC6</p>
+                      <p><span class="custom-label">Reference:</span> <a class="custom-reference" href="http://dx.doi.org/10.1038/ncomms7769">Brown et al., Nat Commun 2021</a></p>
+                      <script>
+                        let parameters3 = {
+                          color: "#FFFFFF",
+                          width: 600,
+                          height: 600,
+                          script: "load=4YC6",
+                          use: "HTML5",
+                          j2sPath: "jsmol/j2s",
+                        };
+                        Jmol.getApplet("myJmol3", parameters3);
+                      </script>
+                      <a href="https://www.rcsb.org/structure/4YC6"><button type="button" class="btn btn-outline-primary">View PDB Entry</button></a>
+                      <a href="#"><button type="button" class="btn btn-outline-success">View AF2 Structure</button></a>
+                    </div>
+                  </div>
+                </div> -->
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+    
+      <!-- jQuery (necessary for Bootstrap's JS plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      
+      <!-- include BootStrap JS file -->
+      <!-- <script src="js/bootstrap.min.js"></script> -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+      <!-- include custom Javascript -->
+      <script src="js/custom.js"></script>
+    
+    </body>
+
+</html>

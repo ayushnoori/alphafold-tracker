@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+      <meta charset="utf-8">
+
+      <!-- include Bootstrap; here, I use a Bootswatch theme rather than the base Bootstrap distribution -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
+
+      <!-- custom CSS and page title -->
+      <link href="css/custom.css" rel="stylesheet">
+      <title>AlphaFold Publication Tracker</title>
+
+    </head>
+    <body>
+        <!-- use Bootstrap flexbox-based grid layout -->
+        <!-- navigation bar source code adapted from https://bootswatch.com/lux/ -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container-fluid">
+            
+            <!-- icon -->
+            <a class="navbar-brand" href="#">AlphaFold Publication Tracker</a>
+            
+            <!-- toggle menu for small screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- define menu items -->
+            <div class="collapse navbar-collapse" id="navbarColor01">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About<span class="visually-hidden">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="examples.html">Examples</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="references.html" role="button" aria-haspopup="true" aria-expanded="true">References</a>
+                  <div class="dropdown-menu" data-bs-popper="none">
+                    <a class="dropdown-item" href="https://doi.org/10.1038/s41586-021-03819-2">AlphaFold Paper</a>
+                    <a class="dropdown-item" href="https://www.biorxiv.org/content/10.1101/2021.10.04.463034v1">AlphaFold-Multimer Paper</a>
+                    <a class="dropdown-item" href="acknowledgements.html">Acknowledgements</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+
+        <!-- main content -->
+        <div class="container custom-container">
+
+          <div class="row">
+            <div class="col-lg-12"></div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="custom-h2">Background</h2>
+
+              <p>Proteins are the basic building block of life. Each protein is composed of a sequence of amino acids. The function of a protein is largely determined by its structure; however, determining structure from sequence is a challenging problem which computational biologists have attempted to solve for over five decades (see the <a href="https://www.predictioncenter.org/">Critical Assessment of Protein Structure Prediction [CASP]</a> experiments).</p>
+
+              <p>In November 2020, a team from Google DeepMind released <a href="https://alphafold.com/">AlphaFold 2</a> (AF2), an artificial intelligence (AI) system to predict 3D protein structure from an amino acid sequence. AF2 won the CASP14 competition, making the best prediction for 88 out of the 97 targets and significantly outperforming other competitor algorithms. AF2 achieved a median global distance test (GDT) score of 92.4/100 and a median root-mean-square deviation (RMSD) of 2.1 Å. These accuracy scores are competitive with often prohibitively time and resource-expensive experimental approaches such as X-ray crystallography. Further, AF2 demonstrated impressive performance at modeling side chain orientations.</p>
+
+              <!-- element adapted from https://bootswatch.com/lux/ -->
+              <figure>
+                <blockquote class="blockquote">
+                  <p class="mb-0">"In this study, we develop the first, to our knowledge, computational approach capable of predicting protein structures to near experimental accuracy in a majority of cases."</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  <a href="https://www.nature.com/articles/s41586-021-03819-2" class="custom-blockquote-footer">Jumper et al., <cite title="Source Title">Nature</cite> 2021</a>
+                </figcaption>
+              </figure>
+            </div>
+
+            <p>AF2 is poised to revolutionize both structural biology and its applications across myriad domains of biology. This website tracks publications pertaining to AF2 and its applications. Further, the <a href="examples.html">Examples</a> page offers several interactive comparisons between experimentally-determined structures and AlphaFold 2 predictions.</p>
+
+            <h2 class="custom-h2">Additional Reading</h2>
+            <ol>
+              <li><a href="https://www.technologyreview.com/2020/11/30/1012712/deepmind-protein-folding-ai-solved-biology-science-drugs-disease/">MIT Technology Review | DeepMind’s protein-folding AI has solved a 50-year-old grand challenge of biology.</a></li>
+              <li><a href="https://deepmind.com/blog/article/putting-the-power-of-alphafold-into-the-worlds-hands">DeepMind | Putting the power of AlphaFold into the world’s hands.</a></li>
+            </ol>
+
+            <h2 class="custom-h2">About</h2>
+            <p>This website was developed by <a href="https://www.ayushnoori.com">Ayush Noori</a> for <a href="https://cs50.harvard.edu/college/2021/fall/">CS50</a> at Harvard College.</p>
+
+          </div>
+        </div>
+    
+      <!-- jQuery (necessary for Bootstrap's JS plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      
+      <!-- include BootStrap JS file -->
+      <!-- <script src="js/bootstrap.min.js"></script> -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+      <!-- include custom Javascript -->
+      <script src="js/custom.js"></script>
+    
+    </body>
+
+</html>

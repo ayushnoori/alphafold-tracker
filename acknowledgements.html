@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+      <meta charset="utf-8">
+
+      <!-- include Bootstrap; here, I use a Bootswatch theme rather than the base Bootstrap distribution -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
+
+      <!-- custom CSS and page title -->
+      <link href="css/custom.css" rel="stylesheet">
+      <title>AlphaFold Publication Tracker</title>
+
+    </head>
+    <body>
+        <!-- use Bootstrap flexbox-based grid layout -->
+        <!-- navigation bar source code adapted from https://bootswatch.com/lux/ -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container-fluid">
+            
+            <!-- icon -->
+            <a class="navbar-brand" href="#">AlphaFold Publication Tracker</a>
+            
+            <!-- toggle menu for small screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- define menu items -->
+            <div class="collapse navbar-collapse" id="navbarColor01">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="examples.html">Examples</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="references.html" role="button" aria-haspopup="true" aria-expanded="true">References<span class="visually-hidden">(current)</span></a>
+                  <div class="dropdown-menu" data-bs-popper="none">
+                    <a class="dropdown-item" href="https://doi.org/10.1038/s41586-021-03819-2">AlphaFold Paper</a>
+                    <a class="dropdown-item" href="https://www.biorxiv.org/content/10.1101/2021.10.04.463034v1">AlphaFold-Multimer Paper</a>
+                    <a class="dropdown-item" href="acknowledgements.html">Acknowledgements</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+
+        <!-- main content -->
+        <div class="container custom-container">
+
+          <div class="row">
+            <div class="col-lg-12"></div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <h2 class="custom-h2">Acknowledgements</h2>
+              <p>I thank the <a href = "https://deepmind.com/">DeepMind</a> team for developing AlphaFold 2, the <a href="https://www.predictioncenter.org/">Critical Assessment of protein Structure Prediction (CASP)</a> competition for their evaluation metrics, and the authors of all publications described here for sharing their work with the scientific community. Finally, I thank the developers of <a href="http://jmol.sourceforge.net/">Jmol</a> and JSmol, which are used to retrieve and visualize protein structures from the <a href="https://www.rcsb.org/">RCSB Protein Data Bank</a> database.</p>
+              <p>This website was developed by <a href="https://www.ayushnoori.com" id="ayush">Ayush Noori</a> for <a href="https://cs50.harvard.edu/college/2021/fall/">CS50</a> at Harvard College.</p>
+            </div>
+
+          </div>
+        </div>
+    
+      <!-- jQuery (necessary for Bootstrap's JS plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      
+      <!-- include BootStrap JS file -->
+      <!-- <script src="js/bootstrap.min.js"></script> -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+      <!-- include custom Javascript -->
+      <script src="js/custom.js"></script>
+    
+    </body>
+
+</html>
