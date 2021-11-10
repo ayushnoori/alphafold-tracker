@@ -8,7 +8,7 @@ h4 {
 /* adjust container padding to add space between navbar and content */
 .custom-container {
     padding-top: 3em;
-    padding-bottom: 1.5em;
+    padding-bottom: 3em;
 }
 
 /* adjust h2 padding to add space between paragraphs */
@@ -17,8 +17,8 @@ h4 {
 }
 
 /* 3. GROUPING SELECTOR */
-/* remove underline in references card */
-.custom-card-link, .custom-reference {
+/* remove underline in references card and from icons */
+.custom-card-link, .custom-reference, .me-4, .text-reset {
     text-decoration: none;
 }
 
@@ -46,8 +46,13 @@ h4 {
 }
 
 /* add italics */
-.custom-italics{
+.custom-italics {
     font-style: italic;
+}
+
+/* add space */
+.custom-bottom {
+    padding-top: 1em;
 }
 
 /* 5. ID SELECTOR */
